@@ -2,6 +2,7 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,9 +27,15 @@ public class DemoApplication {
 	}
 
 	@RequestMapping("/resthello")
-	String hello(){
+	String hello1(){
 		LocalDateTime aaaa = LocalDateTime.now();
 		return "Hello.It works!" + aaaa + "現在時刻はです";
+	}
+
+	@RequestMapping("/hello")
+	String hello(Model model){
+		model.addAttribute("time",LocalDateTime.now());
+		return "hello";
 	}
 
 
