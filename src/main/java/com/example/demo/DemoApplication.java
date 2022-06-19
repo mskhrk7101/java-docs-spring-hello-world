@@ -33,8 +33,8 @@ public class DemoApplication {
 	}
 
 	@RequestMapping("/hello")
-	Model hello(Model model){
+	String hello(Model model){
 		model.addAttribute("time",LocalDateTime.now());
-		return model;
+		return "hello";
 	}
 }
