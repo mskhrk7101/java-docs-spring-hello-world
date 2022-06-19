@@ -17,4 +17,10 @@ public class DemoApplication {
 	String sayHello() {
 		return "Hello APEX";
 	}
+
+	@RequestMapping("/aaa")
+	String sayHello1() {
+		return "Hello APEX";
+	}
+
 }
