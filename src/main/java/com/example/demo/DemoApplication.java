@@ -28,7 +28,7 @@ public class DemoApplication {
 	@RequestMapping("/resthello")
 	String hello(){
 		LocalDateTime aaaa = LocalDateTime.now();
-		return "Hello.It works! + aaaa + 現在時刻はです";
+		return "Hello.It works!" + aaaa + "現在時刻はです";
 	}
 
 
