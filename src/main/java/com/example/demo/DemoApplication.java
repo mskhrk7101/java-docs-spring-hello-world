@@ -35,7 +35,7 @@ public class DemoApplication {
 	@RequestMapping("/hello")
 	String hello(Model model){
 		model.addAttribute("time",LocalDateTime.now());
-		return "hello";
+		return hello(model);
 	}
 
 
